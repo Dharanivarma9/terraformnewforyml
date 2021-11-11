@@ -10,9 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: TerraformInstaller@0
+- task: TerraformTool@0
   inputs:
-    terraformVersion: '0.12.3'
+    version: '0.11.8'
 - task: TerraformTaskV2@2
   inputs:
     provider: 'azurerm'
