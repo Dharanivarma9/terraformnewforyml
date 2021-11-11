@@ -10,8 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
-  displayName: 'Use Terraform latest'
+- task: TerraformInstaller@0
+  inputs:
+    terraformVersion: '0.12.3'
 - task: TerraformTaskV2@2
   inputs:
     provider: 'azurerm'
